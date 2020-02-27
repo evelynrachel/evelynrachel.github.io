@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -31,8 +29,9 @@ nav main a {
   text-decoration: none;
   color: white;
   font-family: 'Raleway', sans-serif;
-  padding-top: 10px;
-  padding-right: 15px;
+  padding-top: 30px;
+  padding-right: 30px;
+  font-size: 18px;
 }
 
 nav main a:hover {
@@ -41,12 +40,11 @@ nav main a:hover {
 }
 
 nav .selalukananatas {
-  width: 30px;
+  width: 100%;
   height: 30px;
   position: absolute;
   top: 10px;
-  right: 20px;
-  background-color: green;
+  background-color: transparent;
   border-radius: 15px;
 }
 
@@ -57,10 +55,16 @@ section {
 }
 
 section.full {
-  background-image: url('../image/bg.jpg');
-  background-size: cover;
+
+  height: 200vh;
+}
+
+section.bg {
+    background-image: url('../image/1.jpg');
+  background-size: cover; 
   background-position: top left;
   background-repeat: no-repeat;
+  overflow-y: auto;
 }
 
 section .left {
@@ -68,6 +72,16 @@ section .left {
   width: 40%;
   height: 100%;
   float: left;
+  background-color: transparent;
+}
+
+section .left2 {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  float: left;
+  background-color: transparent;
+  color: white;
 }
 
 section .right {
@@ -87,29 +101,89 @@ section .melayang {
 }
 /**/
 
-h1 {
-  font-size: 40px;
-  font-family: 'Raleway', sans-serif;
-  font-color: white;
-}
 
-h3 {
-  font-size: 20px;
-  font-family: 'Gill sans', sans-serif;
-}
+
 @media (max-width: 1024px) {
   main {
-    width: 100vw;
-  }
-  
-  section .left, section .right {
     width: 100%;
-    height: 50vh;
-  }
-  
-  section .melayang {
-    top: 80%;
-    left: 10%;
-    width: 90%;
-  }
+    height: 130vh;
+   margin: 0;
+  display: block;
 }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background-color: red;
+  z-index: 10;
+}
+
+main {
+  width: 100vw;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+nav main a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Gill Sans', sans-serif;
+  padding-top: 30px;
+  padding-right: 30px;
+  font-size: 15px;
+}
+
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+section.full {
+  
+}
+section.bg {
+    background-image: url('../image/1.jpg');
+  background-size: cover; 
+  background-position: top left;
+  background-repeat: no-repeat;
+  overflow-y: visible;
+  height:270vh;
+}
+
+
+section .left2 {
+  position: relative;
+  width: 80vw;
+  height: 100%;
+  
+  margin-left: 5%;
+   float: left;
+  background-color: transparent;
+  color: white;
+
+}
+
+section .right {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  float: left;
+}
+
+section .melayang {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  width: 40%;
+  height: 200px;
+  /*background-color: pink;*/
+}
+}
+/**/
+
